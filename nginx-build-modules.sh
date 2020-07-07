@@ -2,7 +2,7 @@
 
 VERSION=1.17.10
 BUILD_DIR=/root/builds/nginx
-
+BUILD_ARGS=$(<nginx-build-args)
 
 #######################
 # Headers More Module #
