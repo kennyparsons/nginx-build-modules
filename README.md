@@ -1,7 +1,7 @@
 # nginx-build-modules
 Bash script to build various nginx modules as dynamic modules. 
 
-This script was originally authored by [whalehub](https://github.com/whalehub). I used it to build some dynamic modules and decided to add more modules to my environment.
+This script was originally authored by [whalehub](https://github.com/whalehub). I used it to build some dynamic modules and I plan to add more in the future.
 
 #### Current Version 1.19.2-r1
 nginx version: 1.19.2  
