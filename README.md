@@ -12,5 +12,7 @@ When a new version of Nginx comes out, the modules need to be updated prior to u
 
 ## Instructions
 1. Clone the repo
-2. Run the `build-modules.sh script`
+2. Run the `build-modules.sh script` with bash 
+ - Option 1: make it executable (chmod +x `build-modules.sh`) and run it directly (`./build-modules.sh`)
+ - Option 2: run it with bash in the terminal (`bash build-modules.sh`)
 3. Install the new nginx version. 
