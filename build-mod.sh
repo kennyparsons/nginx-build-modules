@@ -13,8 +13,10 @@ mkdir "${BUILD_DIR_S:?}" &&
   cd nginx-"${VERSION_S:?}" &&
   echo -e "${BUILD_ARGS:?}" | xargs ./configure \
     --add-dynamic-module="${BUILD_DIR_S:?}"/headers-more-nginx-module \
-    --add-dynamic-module="${BUILD_DIR_S:?}"/ngx_brotli &&
+    --add-dynamic-module="${BUILD_DIR_S:?}"/ngx_brotli \
+    --with-http_xslt_module=dynamic &&
   make &&
-  cp "${BUILD_DIR_S:?}"/nginx-"${VERSION_S:?}"/objs/ngx_http_headers_more_filter_module.so /modules &&
-  cp "${BUILD_DIR_S:?}"/nginx-"${VERSION_S:?}"/objs/ngx_http_brotli_filter_module.so /modules &&
-  cp "${BUILD_DIR_S:?}"/nginx-"${VERSION_S:?}"/objs/ngx_http_brotli_static_module.so /modules
+  # cp "${BUILD_DIR_S:?}"/nginx-"${VERSION_S:?}"/objs/ngx_http_headers_more_filter_module.so /modules &&
+  # cp "${BUILD_DIR_S:?}"/nginx-"${VERSION_S:?}"/objs/ngx_http_brotli_filter_module.so /modules &&
+  # cp "${BUILD_DIR_S:?}"/nginx-"${VERSION_S:?}"/objs/ngx_http_brotli_static_module.so /modules &&
+  cp "${BUILD_DIR_S:?}"/nginx-"${VERSION_S:?}"/objs/*.so /modules

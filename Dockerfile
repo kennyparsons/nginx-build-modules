@@ -17,7 +17,8 @@ RUN apt update && \
     libssl-dev \
     openssl \
     zlib1g \
-    zlib1g-dev
+    zlib1g-dev \
+    libxslt-dev
 
 COPY build-mod.sh /
 
